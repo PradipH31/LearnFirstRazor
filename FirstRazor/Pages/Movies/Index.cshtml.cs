@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using FirstRazor.Data;
 using FirstRazor.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace FirstRazor.Pages.Movies
 {
@@ -19,7 +20,12 @@ namespace FirstRazor.Pages.Movies
             _context = context;
         }
 
-        public IList<Movie> Movie { get;set; }
+        public IList<Movie> Movie { get; set; }
+        [BindProperty(SupportsGet = true)]
+        public string SearchString { get; set; }
+        public SelectList Genres { get; set; }
+        [BindProperty(SupportsGet = true)]
+        public string MovieGenre { get; set; }
 
         public async Task OnGetAsync()
         {

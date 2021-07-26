@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FirstRazor.Migrations
 {
     [DbContext(typeof(FirstRazorContext))]
-    [Migration("20210725184023_AddMovieModel")]
+    [Migration("20210726210359_AddMovieModel")]
     partial class AddMovieModel
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
